@@ -12,7 +12,7 @@ RealSaaS is a starter template for building SaaS products, based on the [Next.js
 - Enhanced user experience and authentication flow
 - Lemon Squeezy integration as an alternative to Stripe
 - Clean, well-structured codebase
-- shadcn components
+- Shadcn components
 - TypeScript support
 - Modern UI components
 
