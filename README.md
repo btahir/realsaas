@@ -6,20 +6,23 @@ RealSaaS is a starter template for building SaaS products, based on the [Next.js
 
 ⚠️ Warning: This repository is provided for learning purposes only and will not be actively maintained. While it represents a working implementation with improved UX and Lemon Squeezy integration, it's based on an older Next.js template. For production projects, please consider using the [latest official Next.js SaaS starter](https://github.com/nextjs/saas-starter) instead. Feel free to explore this codebase to learn from its implementation, but be aware that dependencies may become outdated and security updates will not be provided.
 
-> **Note**: This template is based on an older repository and won't be actively maintained. For new projects, consider using the [official Next.js SaaS starter](https://github.com/nextjs/saas-starter).
-
 ## Features
 
 - Built on a proven Next.js subscription template
 - Enhanced user experience and authentication flow
 - Lemon Squeezy integration as an alternative to Stripe
 - Clean, well-structured codebase
+- shadcn components
 - TypeScript support
 - Modern UI components
 
 ## Success Story
 
 This template was successfully used to build [SnoopHawk](http://snoophawk.com/), demonstrating its capability in real-world applications. During the development of SnoopHawk, several improvements were made to the original template, including UX enhancements and the integration of Lemon Squeezy as a payment processor.
+
+## Sob Story
+
+It wasn't all smooth sailing. I did run into performance issues, such as slow navigation. I suspect this is becasue of the repeated middleware requests and lack of cahcing. I tried caching db auth requests but to limited success. Maybe someone smarter than me can optimize Supabase Auth to be faster.
 
 ## Getting Started
 
@@ -51,6 +54,7 @@ CONTACT_EMAIL=your-contact-email
 ```
 
 You'll need to:
+
 1. Create a Supabase project and get your credentials from the project settings
 2. Set up a Lemon Squeezy account and get your API credentials
 3. Create a SendGrid account for email functionality
@@ -72,6 +76,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ## Purpose
 
 The primary goal of open-sourcing this code is to provide developers with:
+
 - A playground to explore and learn from
 - Real-world example of a SaaS implementation
 - Reference for integrating Lemon Squeezy with Next.js
@@ -80,6 +85,7 @@ The primary goal of open-sourcing this code is to provide developers with:
 ## Important Notes
 
 While this template offers valuable learning opportunities, please note:
+
 - It's based on an older repository
 - It won't be actively maintained
 - Newer alternatives are available (see the [official Next.js SaaS starter](https://github.com/nextjs/saas-starter))
