@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation'
 import { getURL, getErrorRedirect, getStatusRedirect } from '@/lib/utils'
 
 function isValidEmail(email: string) {
-  var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
+  const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/
   return regex.test(email)
 }
 
