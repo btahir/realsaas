@@ -1,4 +1,4 @@
-# RealSaaS - A Next.js SaaS Starter Template
+# RealSaaS - A Next.js + Supabase + Lemon Squeezy SaaS Starter Template
 
 ![Demo](https://github.com/btahir/realsaas/blob/main/app/opengraph-image.png)
 
