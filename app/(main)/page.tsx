@@ -123,11 +123,11 @@ export default function LandingPage() {
               >
                 Next.js-Supabase-Stripe starter
               </a>
-              . I've open-sourced my own version because I particularly liked
+              . I&apos;ve open-sourced my own version because I particularly liked
               the UX, especially the auth flow, and had invested significant
               time making it all look nice and integrating Lemon Squeezy. I
-              didn't want this effort to go to waste. However, please exercise
-              caution when using this code in production - it's intended as a
+              didn&apos;t want this effort to go to waste. However, please exercise
+              caution when using this code in production - it&apos;s intended as a
               starting point rather than a production-ready SaaS solution.
             </p>
           </div>

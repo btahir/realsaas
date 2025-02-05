@@ -31,7 +31,7 @@ function AboutPage() {
           <CardContent>
             <div className='mt-2 space-y-6 leading-8 md:text-lg'>
               <p>
-                Hi, I'm Bilal! I'm passionate about building products that solve real problems. 
+                Hi, I&apos;m Bilal! I&apos;m passionate about building products that solve real problems. 
                 You can check out my other experiments and projects on my{' '}
                 <Link
                   href='https://www.hackyexperiments.com'
@@ -39,7 +39,7 @@ function AboutPage() {
                 >
                   portfolio
                 </Link>
-                . I've greatly benefited from open-source starter code throughout my journey, 
+                . I&apos;ve greatly benefited from open-source starter code throughout my journey, 
                 which has enabled me to build SaaS products quickly and efficiently.
               </p>
 
@@ -89,7 +89,7 @@ function AboutPage() {
               <p>
                 My primary goal in open-sourcing this code is to provide
                 developers with a playground to explore and learn from. If
-                you're familiar with the original starter template, you might
+                you&apos;re familiar with the original starter template, you might
                 appreciate the refined user experience this version offers!
               </p>
             </div>
