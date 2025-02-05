@@ -1,6 +1,6 @@
 # RealSaaS - A Next.js SaaS Starter Template
 
-![Demo](https://github.com/btahir/realsaas/blob/main/public/demo.png)
+![Demo](https://github.com/btahir/realsaas/blob/main/app/opengraph-image.png)
 
 RealSaaS is a starter template for building SaaS products, based on the [Next.js Subscription Payments](https://github.com/vercel/nextjs-subscription-payments) starter. This template features improved UX, refined authentication flow, and Lemon Squeezy integration for payments.
 
