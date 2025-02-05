@@ -77,8 +77,15 @@ export default function LandingPage() {
                 size='lg'
                 variant='outline'
                 className='rounded-full transition-colors duration-300'
+                asChild
               >
-                View Demo
+                <a
+                  href='https://github.com/btahir/realsaas'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Get the Code
+                </a>
               </Button>
             </div>
 
@@ -191,9 +198,17 @@ export default function LandingPage() {
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
               <Button
                 size='lg'
+                variant='default'
                 className='rounded-full transition-colors duration-300'
+                asChild
               >
-                Get Started Now
+                <a
+                  href='https://github.com/btahir/realsaas'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Get the Code
+                </a>
               </Button>
               <a
                 href='https://www.snoophawk.com/'
