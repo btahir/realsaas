@@ -22,15 +22,19 @@ This template was successfully used to build [SnoopHawk](http://snoophawk.com/),
 
 ## Sob Story
 
-It wasn't all smooth sailing. I did run into performance issues, such as slow navigation. I suspect this is becasue of the repeated middleware requests and lack of cahcing. I tried caching db auth requests but to limited success. Maybe someone smarter than me can optimize Supabase Auth to be faster.
+It wasn't all smooth sailing. I did run into performance issues, such as slow navigation. I suspect this is because of the repeated middleware requests and lack of caching. I tried caching db auth requests but to limited success. Maybe someone smarter than me can optimize Supabase Auth to be faster.
 
 ## Getting Started
 
 ### Prerequisites
 
+This code is using the setup I had for [SnoopHawk](http://snoophawk.com/) under the hood meaning the products you see as well as Auth all are configured for SnoopHawk.
+
 You can follow the more detailed guide from the original repository [here](https://github.com/vercel/nextjs-subscription-payments). Supabase can be daunting but the schema.sql commands create all the necessary tables. I personally like to run the commands directly in Supabase to create the tables once I am good with the schema.
 
 You will also need to setup Lemon Squeezy and SendGrid (optionally if you want to receive emails via the contact form).
+
+For auth, you have to setup wildcard redirect urls in Supabase to be configured for the domains you want to use.
 
 ### Environment Setup
 
