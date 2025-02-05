@@ -8,6 +8,7 @@ import SignUp from '@/components/login-forms/sign-up'
 import ForgotPassword from '@/components/login-forms/forgot-password'
 import UpdatePassword from '@/components/login-forms/update-password'
 import { Metadata, ResolvingMetadata } from 'next'
+import { createClient } from '@/lib/supabase/server'
 
 export async function generateMetadata(
   { params, searchParams }: any,
@@ -19,10 +20,10 @@ export async function generateMetadata(
     viewProp === 'password_signin'
       ? 'Login'
       : viewProp === 'forgot_password'
-        ? 'Forgot Password'
-        : viewProp === 'signup'
-          ? 'Sign Up'
-          : 'Update Password'
+      ? 'Forgot Password'
+      : viewProp === 'signup'
+      ? 'Sign Up'
+      : 'Update Password'
 
   return {
     title: finalTitle,
@@ -37,6 +38,7 @@ export default async function LoginPage({
   searchParams: { disable_button: boolean }
 }) {
   const viewTypes = getViewTypes()
+  const supabase = await createClient()
 
   // Declare 'viewProp' and initialize with the default value
   let viewProp: string
@@ -51,7 +53,7 @@ export default async function LoginPage({
     return redirect(`/login/${viewProp}`)
   }
 
-  const user = await getUser()
+  const user = await getUser(supabase)
   // we redirect to account page if user is already logged in
   // exception is when user is updating password.
   // This flow only happens when they come from a Reset Password link via email
