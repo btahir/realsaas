@@ -12,15 +12,15 @@ export interface Database {
       customers: {
         Row: {
           id: string
-          stripe_customer_id: string | null
+          ls_customer_id: string | null
         }
         Insert: {
           id: string
-          stripe_customer_id?: string | null
+          ls_customer_id?: string | null
         }
         Update: {
           id?: string
-          stripe_customer_id?: string | null
+          ls_customer_id?: string | null
         }
         Relationships: [
           {

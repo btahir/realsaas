@@ -49,3 +49,18 @@ export async function getPlanId(variantId: string) {
 
   return data?.id
 }
+
+export async function getPlanData(variantId: string) {
+  const { data, error } = await supabaseAdmin
+    .from('plans')
+    .select('id, name')
+    .eq('variant_id', variantId)
+    .single()
+
+  if (error) {
+    console.error('Error getting plan:', error)
+    return error
+  }
+
+  return { planId: data?.id, planName: data?.name }
+}
