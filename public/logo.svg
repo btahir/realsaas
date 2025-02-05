@@ -1,0 +1,10 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Main cube shape -->
+  <path d="M40 80L100 40L160 80L100 120L40 80Z" fill="#3B82F6" />
+  <path d="M100 120L160 80V140L100 180V120Z" fill="#2563EB" />
+  <path d="M40 80V140L100 180V120L40 80Z" fill="#1D4ED8" />
+  
+  <!-- RS initials -->
+  <path d="M85 85L95 78L105 85L95 92L85 85Z" fill="white" />
+  <path d="M105 92L115 85L105 78L95 85L105 92Z" fill="white" />
+</svg>
