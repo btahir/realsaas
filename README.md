@@ -23,6 +23,12 @@ This template was successfully used to build [SnoopHawk](http://snoophawk.com/),
 
 ## Getting Started
 
+### Prerequisites
+
+You can follow the more detailed guide from the original repository [here](https://github.com/vercel/nextjs-subscription-payments). Supabase can be daunting but the schema.sql commands create all the necessary tables. I personally like to run the commands directly in Supabase to create the tables once I am good with the schema.
+
+You will also need to setup Lemon Squeezy and SendGrid (optionally if you want to receive emails via the contact form).
+
 ### Environment Setup
 
 Create a `.env.local` file in the root directory with the following variables:

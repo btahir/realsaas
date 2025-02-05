@@ -34,8 +34,8 @@ export default async function LoginPage({
   params,
   searchParams,
 }: {
-  params: { id: string }
-  searchParams: { disable_button: boolean }
+  params: any
+  searchParams: any
 }) {
   const viewTypes = getViewTypes()
   const supabase = await createClient()
