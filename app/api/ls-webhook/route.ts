@@ -3,7 +3,11 @@ import { configureLemonSqueezy } from '@/lib/lemon-squeezy/config'
 
 import { getPrice } from '@lemonsqueezy/lemonsqueezy.js'
 
-import { getPlanData, upsertSubscription } from '@/lib/supabase/admin'
+import {
+  getPlanData,
+  upsertSubscription,
+  upsertCustomerToSupabase,
+} from '@/lib/supabase/admin'
 
 import type { TablesInsert } from '@/types_db'
 
@@ -65,10 +69,11 @@ export async function POST(req: Request) {
     plan_id: planId,
   }
 
+  // Update customer data in supabase
+  await upsertCustomerToSupabase(userId, data.id)
+
   // upsert the subscription data
   await upsertSubscription(subscriptionData)
-
-  // OPTIONAL: ADD YOUR OWN LOGIC TO UPDATE USER DATA HERE
 
   return new Response('Subscription updated', {
     status: 200,

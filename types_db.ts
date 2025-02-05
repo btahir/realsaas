@@ -12,15 +12,15 @@ export interface Database {
       customers: {
         Row: {
           id: string
-          ls_customer_id: string | null
+          lemon_squeezy_customer_id: string | null
         }
         Insert: {
           id: string
-          ls_customer_id?: string | null
+          lemon_squeezy_customer_id?: string | null
         }
         Update: {
           id?: string
-          ls_customer_id?: string | null
+          lemon_squeezy_customer_id?: string | null
         }
         Relationships: [
           {

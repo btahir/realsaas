@@ -64,3 +64,22 @@ export async function getPlanData(variantId: string) {
 
   return { planId: data?.id, planName: data?.name }
 }
+
+export const upsertCustomerToSupabase = async (
+  uuid: string,
+  customerId: string
+) => {
+  const { error: upsertError } = await supabaseAdmin.from('customers').upsert([
+    {
+      id: uuid, // UUID from auth.users as primary key
+      lemon_squeezy_customer_id: customerId,
+    },
+  ])
+
+  if (upsertError)
+    throw new Error(
+      `Supabase customer record creation failed: ${upsertError.message}`
+    )
+
+  return customerId
+}

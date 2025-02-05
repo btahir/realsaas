@@ -52,6 +52,25 @@ create policy "Allow public read-only access." on plans for select using (true);
 for select using (true);
 
 /**
+* CUSTOMERS
+* Note: this is a private table that contains a mapping of user IDs to Stripe customer IDs.
+*/
+create table customers (
+  id uuid default uuid_generate_v4() primary key,
+  lemon_squeezy_id text unique not null,
+  user_id uuid references auth.users(id) not null,
+  name text,
+  email text,
+  status text,
+  created_at timestamp with time zone default timezone('utc'::text, now()) not null,
+  updated_at timestamp with time zone default timezone('utc'::text, now()) not null
+);
+
+-- Add trigger for updated_at
+create trigger handle_updated_at before update on customers
+  for each row execute procedure moddatetime (updated_at);
+
+/**
 * SUBSCRIPTIONS
 */
 -- Creating an enum type for subscription status
